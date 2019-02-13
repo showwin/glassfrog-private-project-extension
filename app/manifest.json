@@ -1,0 +1,29 @@
+{
+  "name": "GlassFrog Private Project",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Keep GlassFrog projects PRIVATE",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/chromereload.js",
+      "scripts/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.glassfrog.com/*"
+      ],
+      "js": [
+        "bower_components/jquery/dist/jquery.min.js",
+        "scripts/contentscript.js"
+      ]
+    }
+  ],
+  "permissions": []
+}
