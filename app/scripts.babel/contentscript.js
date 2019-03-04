@@ -12,5 +12,6 @@ function watchProjectModal () {
   setTimeout(function () {
     checkToPrivate();
     watchProjectModal();
-  }, 2000)
+    console.log('checked')
+  }, 80)
 }
