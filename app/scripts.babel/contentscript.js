@@ -5,13 +5,14 @@ $(function () {
 });
 
 function checkToPrivate() {
-  $('input#private-to-circle').prop('checked', true);
+  if (!$('input#private-to-circle').prop('checked')) {
+    $('input#private-to-circle').click()
+  };
 }
 
 function watchProjectModal () {
   setTimeout(function () {
     checkToPrivate();
     watchProjectModal();
-    console.log('checked')
-  }, 80)
+  }, 2000)
 }
